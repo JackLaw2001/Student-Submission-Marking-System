@@ -1,0 +1,7 @@
+argparse
+beautifulsoup4
+glob2
+markdown
+openai
+pandas
+rarfile
