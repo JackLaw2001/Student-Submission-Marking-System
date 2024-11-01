@@ -104,7 +104,7 @@ def marking(dirns):
             GitM = '\n'.join(GitM)
 
         # Code
-        pypath = find_files_with_suffix('walking_panda.py', dirn)[0]
+        pypath = find_files_with_suffix('walking_panda.py', dirn)[0] if len(find_files_with_suffix('walking_panda.py', dirn)) != 0 else -1
         CODE = ' '.join(['\n# Path:' + path + '\n' + read_text_file(path) for path in find_files_with_suffix('.py', dirn) if 'venv' not in path])
         ARGUCount = CODE.count('parser.add_argument')
 
