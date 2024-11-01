@@ -192,7 +192,7 @@ if __name__ == '__main__':
     output_dir = args.output_dir
     openai.api_key = args.apikey if args.apikey != None else read_text_file(os.path.join(prompts_dir, 'APIkey.txt'))
     
-    dirns = sorted(glob(os.path.join(root_dir, '*')))[:2]
+    dirns = sorted(glob(os.path.join(root_dir, '*')))
     asstable, markdownsall = marking(dirns)
     asstable.to_csv(os.path.join(output_dir, 'marks.csv'))
     save_txt_file(markdownsall, os.path.join(output_dir, 'all.md'))
