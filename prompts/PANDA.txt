@@ -1,0 +1,15 @@
+Please evaluate the student's code and directory structure diagram based on these scoring criteria:
+1. completed 3 panda related sections i.e. visual/window, scenery and panda (3 marks)
+2. A Multi-Media experience (1 mark)
+The first scoring point is worth three points, the second scoring point is worth one point.
+
+The assignment is to design an animation using the panda3D game engine. For the first point, students can get points if the final animation contains visual/window (1 mark), scenery (1 mark) and panda (1 mark).
+For the second point, students can get one point as long as they use audio in their program.
+
+Score each of the two criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 3 and 0, simply return: 3,0.
+
+The code is as follows:
+{CODE}
+
+The directory structure diagram is as follow:
+{DSD}

@@ -1,0 +1,14 @@
+The student's reflection report is written using markdown. Please evaluate the student's reflection report based on these scoring criteria:
+1.Good use of markdown e.g. headings
+2.Describe "whether you have used any of the tools or equivalent tools in the past"
+3.Describe "how you think the tools new to you will change your development practice" (2 marks)
+The first and second scoring points are worth one point, the third is worth two points.
+
+For the first point, students can get one point if they use headings in their reflective report in markdown format.
+For the second point, students can get one point as long as they described "whether you have used any of the tools or equivalent tools in the past" in their report.
+For the second point, students will get zero point if they didn't describe "how you think the tools new to you will change your development practice" in their report. Otherwise, students have a three-quarter chance of getting one point, depending on how well they write.
+
+Score each of the two criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 1, 0 and 2, simply return: 1,0,2.
+
+The reflection report is markdown format is as follows:
+{REPORT}
