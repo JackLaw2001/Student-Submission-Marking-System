@@ -32,24 +32,16 @@ This script processes student submissions in specified directories and grades th
    pip install -r requirements.txt
    
 3. **Run the Script**: Execute the script from the command line. The following command-line arguments are available:
+   
    ```bash
    python marking_script.py --root_dir <path_to_raw_submissions> --markdown_dir <path_to_save_markdown_reports> --prompts_dir <path_to_prompts> --output_dir <output_directory> --apikey <your_api_key>
+   ```
    
    - _--root_dir_: Root directory for raw submissions (default: ./Raw)
    - _--markdown_dir_: Directory to save markdown reports (default: ./MarkDowns)
    - _--prompts_dir_: Directory containing prompt files (default: ./prompts)
    - _--output_dir_: Output directory for generated files (default: .)
    - _--apikey_: API key for ChatGPT (default: None)
-   
-## Directory Structure
-```bash
-.
-├── Raw               # Directory containing raw submissions
-├── MarkDowns         # Directory to save markdown reports
-├── prompts           # Directory containing prompt files for grading
-├── requirements.txt   # Python dependencies (optional)
-└── marking_script.py  # The main script to run
-```
 
 ## Example
    ```bash
