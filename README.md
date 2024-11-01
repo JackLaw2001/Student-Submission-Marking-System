@@ -37,11 +37,11 @@ This script processes student submissions in specified directories and grades th
    python marking_script.py --root_dir <path_to_raw_submissions> --markdown_dir <path_to_save_markdown_reports> --prompts_dir <path_to_prompts> --output_dir <output_directory> --apikey <your_api_key>
    ```
    
-   - _--root_dir_: Root directory for raw submissions (default: ./Raw)
-   - _--markdown_dir_: Directory to save markdown reports (default: ./MarkDowns)
-   - _--prompts_dir_: Directory containing prompt files (default: ./prompts)
-   - _--output_dir_: Output directory for generated files (default: .)
-   - _--apikey_: API key for ChatGPT (default: None)
+   - `--root_dir`: Root directory for raw submissions (default: ./Raw)
+   - `--markdown_dir`: Directory to save markdown reports (default: ./MarkDowns)
+   - `--prompts_dir`: Directory containing prompt files (default: ./prompts)
+   - `--output_dir`: Output directory for generated files (default: .)
+   - `--apikey`: API key for ChatGPT (default: None)
 
 ## Example
    ```bash
