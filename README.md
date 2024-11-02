@@ -47,5 +47,5 @@ This script processes student submissions in specified directories and grades th
 
 ## Example
    ```bash
-   python marking_script.py --root_dir ./Raw --markdown_dir ./MarkDowns --prompts_dir ./prompts --apikey YOUR_API_KEY
+   python marking.py --root_dir ./Raw --markdown_dir ./MarkDowns --prompts_dir ./prompts --apikey YOUR_API_KEY
 
