@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 from utils import *
 from args import *
 import markdown
+from openpyxl import load_workbook
+from openpyxl.utils import column_index_from_string, get_column_letter
 
 def marking(dirns):
     """
@@ -191,8 +193,39 @@ if __name__ == '__main__':
     prompts_dir = args.prompts_dir
     output_dir = args.output_dir
     openai.api_key = args.apikey if args.apikey != None else read_text_file(os.path.join(prompts_dir, 'APIkey.txt'))
+    marking_table = args.marking_table
     
     dirns = sorted(glob(os.path.join(root_dir, '*')))
     asstable, markdownsall = marking(dirns)
     asstable.to_csv(os.path.join(output_dir, 'marks.csv'))
     save_txt_file(markdownsall, os.path.join(output_dir, 'all.md'))
+
+    if os.path.exists(marking_table):
+        marks = pd.read_csv(os.path.join(output_dir, 'marks.csv'), index_col = 0)
+        workbook = load_workbook(filename=marking_table)
+        markingsheet = workbook['Marking']
+        cols = []
+        for cell in markingsheet[1]:
+            if cell.value == 'Number:':
+                current_col = get_column_letter(cell.column)
+                next_col = get_column_letter(column_index_from_string(current_col) + 1)
+                cols.append(current_col)
+
+        for i in range(len(marks)):
+            next_col = get_column_letter(column_index_from_string(cols[i]) + 1)
+            markingsheet[next_col + str(1)] = marks.iloc[i,1]
+            markingsheet[next_col + str(2)] = marks.iloc[i,0]
+            
+            for j in range(6):
+                markingsheet[cols[i] + str(5+j)] = marks.iloc[i,17+j]
+                
+            for j in range(6):
+                markingsheet[cols[i] + str(13+j)] = marks.iloc[i,23+j]
+                
+            for j in range(5):
+                markingsheet[cols[i] + str(21+j)] = marks.iloc[i,29+j]
+                
+            markingsheet[cols[i] + str(27)] = marks.iloc[i,34]
+
+        workbook.save(marking_table)
+

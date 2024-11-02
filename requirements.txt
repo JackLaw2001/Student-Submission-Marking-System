@@ -5,3 +5,4 @@ markdown
 openai
 pandas
 rarfile
+openpyxl

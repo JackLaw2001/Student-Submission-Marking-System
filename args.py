@@ -60,6 +60,13 @@ def create_parser():
     )
 
     parser.add_argument(
+        '--marking_table', 
+        type=str, 
+        default='./marking.xlsx', 
+        help='Path of the marking table (default: ./marking.xlsx)'
+    )
+
+    parser.add_argument(
         '--apikey', 
         type=str, 
         default=None, 
