@@ -17,6 +17,7 @@ This script processes student submissions in specified directories and grades th
 - `pandas`
 - `BeautifulSoup4`
 - `markdown`
+- `openpyxl`
 
 ## Usage
 
@@ -41,6 +42,7 @@ This script processes student submissions in specified directories and grades th
    - `--markdown_dir`: Directory to save markdown reports (default: ./MarkDowns)
    - `--prompts_dir`: Directory containing prompt files (default: ./prompts)
    - `--output_dir`: Output directory for generated files (default: .)
+   - `--marking_table`: Path of the marking sheet (default: ./marking.xlsx)
    - `--apikey`: API key for ChatGPT (default: None)
 
 ## Example
