@@ -1,6 +1,6 @@
 Please evaluate the student's code and 'README.md' based on these scoring criteria:
-1. Updated README.md accroding to code
-2. Included comments in code (e.g. referenced external code)
+1. README.md is not a blank file and contains information on how to use a program
+2. Included comments in code
 Each of the above two scoring points is worth one point.
 
 Score each of the two criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 1 and 0, simply return: 1,0.

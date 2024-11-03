@@ -1,28 +1,16 @@
 Please evaluate the following Github commit records based on these scoring criteria:
-1. At least 4 commits i.e. hello_world, README/LICENCE, add some scenery, add a panda;
-2. Provided meaningful commit messages (about part 1 only);
-3. Committed and provided meaningful commit messages (about part 2 only);
-4. Committed and provided meaningful commit messages (about part 3 only).
+1. At least 4 commits;
+2. Provided meaningful commit messages;
+3. Committed and provided meaningful commit messages;
+4. Committed and provided meaningful commit messages.
 Each of the above four scoring points is worth one point.
 
 If there are no commit records, just return '0,0,0,0'!!!
-If there are no commit records, just return '0,0,0,0'!!!
-If there are no commit records, just return '0,0,0,0'!!!
 
-For scoring point 2-4, if the student's commit record is empty, or the commit record only contains the file names, such as 'Commit: hello_world.py', they will get zero points. Otherwise, they can get full marks
+For scoring point 1, students score as long as there are more than 4 commits
+For scoring point 2-4, students score as long as part or all the commit messages provided are meaningful. If the student's commit record is empty, or the entire commit record only contains the file names, such as 'Commit: hello_world.py', they will get zero points. 
 
-Part 1 tasks include:
-* completed "Add README.md and LICENSE.md" section
-* completed "Adding a Dependency" section i.e. added panda3D to requirements.txt
-
-Part 2 tasks include:
-* Report as a markdown file, found in doc directory
-
-Part 3 tasks include:
-* Updated README.md
-* Uploaded code
-
-Score each of the four criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 1, 1, 0, and 1, simply return: 1,1,0,1. If there are no commit messages, just return '0,0,0,0'. 
+Score each of the four criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 0, 1, 1, and 1, simply return: 0,1,1,1. If there are no commit messages, just return '0,0,0,0'. 
 
 The commit records are as follows:
 {GitM}
