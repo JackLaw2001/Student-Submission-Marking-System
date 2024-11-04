@@ -173,7 +173,7 @@ def marking(dirns):
         marking['All_marks'] = generate_markdown_report_string(marking, full_marking, studinfo, assinfo, dirn)
 
         assinfo.update(marking)
-        mdreport = MarkdownReport.format(assinfo)
+        mdreport = MarkdownReport.format(**assinfo)
         save_txt_file(mdreport, os.path.join(markdown_dir, '{}.md'.format(studinfo['ID'])))
 
         markdowns.append(mdreport)

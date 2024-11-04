@@ -34,15 +34,15 @@ This script processes student submissions in specified directories and grades th
 
 3. **Prepare submissions**: Download submissions from NESS in the following format and extract the submissions to a folder called *Raw*. In the subdirectory of *Raw*, you should see the student submissions in the format like *24XXXXXXX*.
 
-![NESS](.\figs\NESS)
+![NESS](https://github.com/JackLaw2001/Student-Submission-Marking-System/blob/main/figs/NESS)
 Move the marking sheet to the same folder of *marking.py* and rename it as *marking.xlsx*. 
 After you prepare all necessary files, the folder should looks like this:
 
-![Folder](.\figs\Folder)
+![Folder](https://github.com/JackLaw2001/Student-Submission-Marking-System/blob/main/figs/Folder)
 
-4. **Apply for a ChatGPT API key**: Apply a ChatGPT API key and put it in the *prompts/APIkey.txt*.   
+1. **Apply for a ChatGPT API key**: Apply a ChatGPT API key and put it in the *prompts/APIkey.txt*.   
 
-5. **Run the Script**: Execute the script from the command line. The following command-line arguments are available:
+2. **Run the Script**: Execute the script from the command line. The following command-line arguments are available:
 
 ```bash
 python marking_script.py --root_dir <path_to_raw_submissions> --markdown_dir <path_to_save_markdown_reports> --prompts_dir <path_to_prompts> --output_dir <output_directory> --apikey <your_api_key>
