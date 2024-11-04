@@ -42,6 +42,8 @@ def marking(dirns):
         if count_files_in_directory(dirn) < 5:
             all_fns = glob(os.path.join(dirn, '*'))
             non_txt_fns = [f for f in all_fns if not f.endswith('.txt')]
+            if len(non_txt_fns) == 0:
+                continue
             extract_file(non_txt_fns[0])
 
         marking = {}

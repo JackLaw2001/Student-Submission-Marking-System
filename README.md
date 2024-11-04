@@ -2,6 +2,8 @@
 
 This script processes student submissions in specified directories and grades them based on predefined criteria using a marking system powered by ChatGPT. It generates markdown reports that summarize the assessment information for each student.
 
+This project can be easily extended to marking other courses. **If you find this project useful, please star this project**
+
 ## Features
 
 - Extracts information from student submission directories.
