@@ -1,13 +1,14 @@
 Please evaluate the following Github commit records based on these scoring criteria:
-1. At least 4 commits;
+1. At least 4 commits  i.e. hello_world, README/LICENCE, add some scenery, add a panda; If the word commit occurs less than 4 times, the student will get zero points;
 2. Provided meaningful commit messages;
 3. Committed and provided meaningful commit messages;
 4. Committed and provided meaningful commit messages.
 Each of the above four scoring points is worth one point.
 
 If there are no commit records, just return '0,0,0,0'!!!
+If the word commit occurs less than 4 times, the student will get zero points in the first scoring point!!!
 
-For scoring point 1, students score as long as there are more than 4 commits
+For scoring point 1, students score as long as there are more than 4 commits. If the word commit occurs less than 4 times, the student will get zero points.
 For scoring point 2-4, students score as long as part or all the commit messages provided are meaningful. If the student's commit record is empty, or the ENTIRE commit record only contains the file names, such as 'Commit: hello_world.py', they will get zero points. 
 
 Score each of the four criteria out of 1 point. RETURN ONLY THE SCORES FOR EACH SECTION IN A COMMA-SEPARATED FORMAT, WITHOUT ANY EXTRA INFORMATION. For example, if the student scores 0, 1, 1, and 1, simply return: 0,1,1,1. If there are no commit messages, just return '0,0,0,0'. 
