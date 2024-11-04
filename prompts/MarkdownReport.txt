@@ -10,9 +10,7 @@ Main Python File Path: {PythonPath}
 ```  
 
 ### Marks  
-<big>
-{All_marks}
-</big>  
+<big>{All_marks}</big>  
 
 ### Git Message  
 {GitM}  
