@@ -2,7 +2,9 @@
 
 This script processes student submissions in specified directories and grades them based on predefined criteria using a marking system powered by ChatGPT. It generates markdown reports that summarize the assessment information for each student.
 
-This project can be easily extended to marking other courses. **If you find this project useful, please star this project**
+This project can be easily extended to marking other courses. **If you find this project useful, please star this project.**  
+
+This system is only used as an aid for marking. **It is markers' own responsibility to make sure all marks are correct.** 
 
 ## Features
 
@@ -26,17 +28,16 @@ This project can be easily extended to marking other courses. **If you find this
 1. **Clone the Repository**:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
-
+   git clone https://github.com/JackLaw2001/Student-Submission-Marking-System.git
+   
 2. **Install Dependencies** : Make sure to install the required Python packages:
 
    ```bash
    pip install -r requirements.txt
 
-3. **Prepare submissions**: Download submissions from NESS in the following format and extract the submissions to a folder called *Raw*. In the subdirectory of *Raw*, you should see the student submissions in the format like *24XXXXXXX*.
+3. **Prepare submissions**: Download submissions from thesystem in the following format and extract the submissions to a folder called *Raw*. In the subdirectory of *Raw*, you should see the student submissions in the format like *24XXXXXXX*.
 
-![NESS](https://github.com/JackLaw2001/Student-Submission-Marking-System/blob/main/figs/NESS)
+![System](https://github.com/JackLaw2001/Student-Submission-Marking-System/blob/main/figs/System)
 Move the marking sheet to the same folder of *marking.py* and rename it as *marking.xlsx*. 
 After you prepare all necessary files, the folder should looks like this:
 
@@ -47,7 +48,7 @@ After you prepare all necessary files, the folder should looks like this:
 5. **Run the Script**: Execute the script from the command line. The following command-line arguments are available:
 
 ```bash
-python marking_script.py --root_dir <path_to_raw_submissions> --markdown_dir <path_to_save_markdown_reports> --prompts_dir <path_to_prompts> --output_dir <output_directory> --apikey <your_api_key>
+python marking.py --root_dir <path_to_raw_submissions> --markdown_dir <path_to_save_markdown_reports> --prompts_dir <path_to_prompts> --output_dir <output_directory> --apikey <your_api_key>
 ```
 
 - `--root_dir`: Root directory for raw submissions (default: ./Raw)
