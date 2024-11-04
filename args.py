@@ -86,7 +86,7 @@ def check(args):
         SystemExit: If any of the checks fail.
     """
     # Check for necessary prompt files
-    prompt_files = ['CODE.txt', 'GitM.txt', 'PANDA.txt', 'REPORT.txt']
+    prompt_files = ['CODE.txt', 'GitM.txt', 'PANDA.txt', 'REPORT.txt', 'MarkdownReport.txt']
     missing_files = [file for file in prompt_files if not os.path.isfile(os.path.join(args.prompts_dir, file))]
 
     if missing_files:

@@ -28,6 +28,7 @@ def marking(dirns):
     CODEMarker = GPTMarker(promptCODE, [1,1])
     REPORTMarker = GPTMarker(promptREPORT, [1,1,2])
     PANDAMarker = GPTMarker(promptPANDA, [3,1])
+    MarkdownReport = read_text_file(os.path.join(prompts_dir, 'MarkdownReport.txt'))
     
     assinfos = []
     markdowns = []
@@ -169,13 +170,14 @@ def marking(dirns):
 
         ### Step 3: Generate reports and update
 
-        mkr = generate_markdown_report_string(marking, full_marking, studinfo, assinfo, dirn)
-        mkds = '{}  \n## LICENSE.md  \n{}\n## README.md  \n{}\n## REPORT.md  \n{}\n## Git Message  \n{}\n## requirements.txt  \n{}\n## CODE  \n```python{}```'.format(mkr, LICENSEmd, READMEmd, REPORTmd, GitM, REQS, CODE)
-        save_txt_file(mkds, os.path.join(markdown_dir, '{}.md'.format(studinfo['ID'])))
+        marking['All_marks'] = generate_markdown_report_string(marking, full_marking, studinfo, assinfo, dirn)
 
         assinfo.update(marking)
+        mdreport = MarkdownReport.format(assinfo)
+        save_txt_file(mdreport, os.path.join(markdown_dir, '{}.md'.format(studinfo['ID'])))
+
+        markdowns.append(mdreport)
         assinfos.append(assinfo)
-        markdowns.append(mkds)
     
     asstable = pd.DataFrame(assinfos)
     markdownsall = '  \n'.join(markdowns)

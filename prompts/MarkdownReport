@@ -1,14 +1,35 @@
-## LICENSE.md  
+# Marking Report {ID}  
+Name: **{Name}**  
+ID: **{ID}**  
+E-mail: **{Email}**  
+Main Python File Path: {PythonPath}  
 
-## README.md  
+### Directory structure diagram  
+```bash
+{DSD}
+```  
 
-## REPORT.md  
+### Marks  
+<big>
+{All_marks}
+</big>  
 
-## Git Message  
+### Git Message  
+{GitM}  
 
-## requirements.txt  
+### README.md  
+{README}  
 
-## CODE  
+### REPORT.md  
+{REPORT}  
+
+### LICENSE.md  
+{LICENSE}  
+
+### requirements.txt  
+{REQUIREMENTS}  
+
+### CODE  
 ```python
-{}
+{CODE}
 ```

@@ -312,18 +312,7 @@ def generate_markdown_report_string(marking, full_marking, studinfo, assinfo, di
         str: A Markdown formatted string representing the marking report.
     """
     # Start with the report title
-    markdown_content = "# Marking Report {}\n".format(studinfo['ID'])
-    markdown_content += "Name: **{}**  \n".format(studinfo['Name'])
-    markdown_content += "ID: **{}**  \n".format(studinfo['ID'])
-    markdown_content += "Email: **{}**  \n".format(studinfo['Email'])
-    
-    markdown_content += "Main Python File Path:  \n{}  \n".format(assinfo['PythonPath']) 
-    
-    dirstru = get_directory_structure(dirn)  # Get the directory structure
-    markdown_content += "Directory structure diagram:  \n{}  \n".format(dirstru) 
-    
-    markdown_content += "This report lists the grading points and their corresponding scores.  \n" 
-    markdown_content += "<big>\n" 
+    markdown_content = ""
     # Iterate through the dictionary to generate the marking report
     for point in marking:
         score = marking[point]
@@ -333,6 +322,5 @@ def generate_markdown_report_string(marking, full_marking, studinfo, assinfo, di
             markdown_content += f"{point}: **{score}** / {full_score}  \n"  # Highlight scores below full marks
         else:
             markdown_content += f"{point}: {score} / {full_score}  \n"  # Normal display for full marks
-    markdown_content += "</big>\n" 
 
     return markdown_content
