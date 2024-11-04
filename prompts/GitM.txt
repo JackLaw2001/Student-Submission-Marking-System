@@ -1,9 +1,20 @@
 Please evaluate the following Github commit records based on these scoring criteria:
 1. At least 4 commits  i.e. hello_world, README/LICENCE, add some scenery, add a panda; If the word commit occurs less than 4 times, the student will get zero points;
-2. Provided meaningful commit messages;
-3. Committed and provided meaningful commit messages;
-4. Committed and provided meaningful commit messages.
+2. Provided meaningful commit messages (about part 1 only);
+3. Committed and provided meaningful commit messages (about part 2 only);
+4. Committed and provided meaningful commit messages (about part 3 only).
 Each of the above four scoring points is worth one point.
+
+Part 1 tasks include:
+* completed "Add README.md and LICENSE.md" section
+* completed "Adding a Dependency" section i.e. added panda3D to requirements.txt
+
+Part 2 tasks include:
+* Report as a markdown file, found in doc directory
+
+Part 3 tasks include:
+* Updated README.md
+* Uploaded code
 
 If there are no commit records, just return '0,0,0,0'!!!
 If the word commit occurs less than 4 times, the student will get zero points in the first scoring point!!!
